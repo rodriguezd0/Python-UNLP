@@ -1,4 +1,5 @@
 ## Adivina adivinador....
+## Comentario solo para probar actualizar un archivo con git
 import random
 numero_aleatorio = random.randrange(101)
 gane = False
@@ -13,6 +14,6 @@ while intento <= 5 and not gane:
     else:
         print('Mmmm ... No.. ese número no es... Seguí intentando.')
         intento += 1
-        
+
 if not gane:
     print('\n Perdiste :(\n El número era: {}'.format(numero_aleatorio))
