@@ -1,3 +1,5 @@
+#Solucion alternativa al propuesto en el PDF
+
 conjunto_palabras = []
 
 for i in range(4):
