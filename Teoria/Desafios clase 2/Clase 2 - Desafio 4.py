@@ -12,7 +12,7 @@ def calcular_promedio(diccionario_alumnos):
     suma = 0
     for i in diccionario_alumnos:
         suma += diccionario_alumnos[i]
-    return suma/len(diccionario_alumnos) if len(diccionario_alumnos) else 0
+    return suma/len(diccionario_alumnos) if len(diccionario_alumnos) > 0 else 0
 
 def imprimir_menores(diccionario_alumnos,p):
     for i in diccionario_alumnos:
