@@ -1,0 +1,17 @@
+It provides:
+
+    a powerful N-dimensional array object
+    sophisticated (broadcasting) functions
+    tools for integrating C/C++ and Fortran code
+    useful linear algebra, Fourier transform, and random number capabilities
+
+Testing:
+
+NumPy requires pytest and hypothesis. Tests can then be run after installation with:
+
+python -c 'import numpy; numpy.test()'
+
+Code of Conduct
+
+NumPy is a community-driven open source project developed by a diverse group of contributors. The NumPy leadership has made a strong commitment to creating an open, inclusive, and positive community. Please read the NumPy Code of Conduct for guidance on how to interact with others in a way that makes our community thrive.
+Call for Contributions
