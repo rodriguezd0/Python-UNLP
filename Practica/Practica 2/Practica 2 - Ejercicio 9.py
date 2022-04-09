@@ -2,6 +2,8 @@ filas = 4
 columnas = 5
 
 def definir_mapa(filas,columnas):
+    """Esta funcion nos permite crear el mapa del buscaminas"""
+
     mapa = []
     print(f'El mapa actual tiene {filas} filas y {columnas} columnas, si desea cambiarlo ingrese SI')
     if input().lower() == 'si':
@@ -21,6 +23,11 @@ def definir_mapa(filas,columnas):
     return filas,columnas,mapa
 
 def calcular_mapa(filas,columnas,mapa):
+    """Esta funcion recorre todo el mapa hasta encontrar una bomba,
+    una vez que encuentra la bomba recorre todas las celdas que la rodean
+    y les agrega un punto. Siempre cuidando de no salirnos del rango y
+    de no intentar sumarle a un string"""
+    
     for i in range(filas):
         for k in range(columnas):
             if mapa[i][k] == '*':
