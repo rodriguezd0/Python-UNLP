@@ -7,7 +7,6 @@ with open("textoDelReadme.txt", 'r') as archivo:
 
 def con_for():
     cantidad_palabras = {}
-
     #Proceso las cantidades
     for i in todas_las_palabras:
         if i.lower() in cantidad_palabras:
@@ -23,8 +22,8 @@ def con_counter():
     mas_comun = c.most_common(1)[0]
     print(f"La palabra mas comun es \"{mas_comun[0]}\" con {mas_comun[1]} repeticiones.")
 
-eleccion = input("Ingrese a(for) b(counter): ")
-if eleccion=='a':
+eleccion = input("Ingrese su opcion: \n a (for) \n b (counter) \n\n ")
+if eleccion.lower()=='a':
     con_for()
 else:
     con_counter()
