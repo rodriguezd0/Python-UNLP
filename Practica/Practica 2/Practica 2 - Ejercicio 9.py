@@ -27,7 +27,7 @@ def calcular_mapa(filas,columnas,mapa):
     una vez que encuentra la bomba recorre todas las celdas que la rodean
     y les agrega un punto. Siempre cuidando de no salirnos del rango y
     de no intentar sumarle a un string"""
-    
+
     for i in range(filas):
         for k in range(columnas):
             if mapa[i][k] == '*':
@@ -65,10 +65,15 @@ def calcular_mapa(filas,columnas,mapa):
                         mapa[i+1][k+1] += 1
     return mapa
 
+def imprimir_mapa(mapa):
+    """Recorre el mapa y columna a columna va separando los elementos
+    con un guion para luego imprimirlos en pantalla"""
+
+    for i in mapa:
+        print('')
+        for k in i:
+            print(k, end=' - ')
+
 filas,columnas,mapa = definir_mapa(filas,columnas)
 mapa = calcular_mapa(filas,columnas,mapa)
-
-for i in mapa:
-    print('')
-    for k in i:
-        print(k, end=' - ')
+imprimir_mapa(mapa)
