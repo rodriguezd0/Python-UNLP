@@ -1,4 +1,6 @@
-def ordenar_cadena(cadena="TEXTO"):
-    cadena.split().sort(key=cadena.lower())
-    return cadena
-print(ordenar_cadena("holaaa tengo hambre"))
+cadena = "hola tengo hambre"
+
+def ordenar_cadena(cadena):
+    return sorted(cadena.split(), key=str.lower)
+
+print(ordenar_cadena(cadena))
