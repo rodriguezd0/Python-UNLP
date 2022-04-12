@@ -1,5 +1,3 @@
-import string
-
 devolver_conjunto = lambda frase_repetida: set(frase_repetida.lower())
 
 print('Ingrese una frase')
@@ -14,5 +12,6 @@ for i in range(len(frase)):
         primer_espacio = False
     elif frase[i] == ' ' and not primer_espacio:
         espacios +=1
+#SI ES SOLO UNA PALABRA, ES INNECESARIO CONTAR ESPACIOS, se podria borrar el codigo de la linea 6 a la 15 y el '- espacios' en el if y funcionaria perfectamente
 
 print(f'{frase} es un heterograma' if (len(frase) - espacios) == len(devolver_conjunto(frase)) else f'{frase} NO es un heterograma')

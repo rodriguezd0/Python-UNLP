@@ -1,10 +1,10 @@
-def conArchivo():
+def con_archivo():
     archivo = open("textoDelReadme.txt", "r")
     for i in archivo:
         if 'http' in i.lower():
             print(i)
 
-def conTexto():
+def con_texto():
     texto = []
     print("Ingrese el texto (CTRL + D (Linux) o CTRL + Z (Windows) para finalizar): ")
     #Leer hasta que el usuario aprete CTRL + D para finalizar la carga indicando fin de archivo
@@ -32,6 +32,6 @@ print("""Ingrese el metodo:
 2 - Por texto (Debes pegar el texto del readme)""")
 eleccion = input()
 if eleccion == '1':
-    conArchivo()
+    con_archivo()
 else:
-    conTexto()
+    con_texto()

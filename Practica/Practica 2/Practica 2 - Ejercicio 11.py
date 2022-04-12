@@ -1,6 +1,6 @@
 def sacar_acentos(texto):
     """Saco los acentos de los nombres para poder evaluarlos mejor cuando hago la comparacion entre los dos textos"""
-    sacar = {'á':'a', 'é':'e', 'í':'i', 'ó':'o', 'ú':'u', 'Á':'A', 'É':'E', 'Í':'I', 'Ó':'O', 'Ú':'U'}
+    sacar = {'á':'a', 'é':'e', 'í':'i', 'ó':'o', 'ú':'u'}
     for i in sacar:
         texto = texto.replace(i,sacar[i])
     return texto
@@ -14,22 +14,17 @@ def obtener_datos():
     eval_2 = open('eval2.txt','r').read()
 
     #Fase de modificacion de archivos
-    nombres_1 = nombres_1.replace('\'','').replace('\n','').replace(' ','')
-    nombres_2 = nombres_2.replace('\'','').replace('\n','').replace(' ','')
+    nombres_1 = nombres_1.replace('\'','').replace('\n','').replace(' ','').lower()
+    nombres_2 = nombres_2.replace('\'','').replace('\n','').replace(' ','').lower()
 
     nombres_1 = sacar_acentos(nombres_1)
     nombres_2 = sacar_acentos(nombres_2)
 
-    nombres_1 = nombres_1.lower()
-    nombres_2 = nombres_2.lower()
-
-    eval_1 = eval_1.strip('\n ')
-    eval_2 = eval_2.strip('\n ')
+    eval_1 = eval_1.strip('\n ').split(',')
+    eval_2 = eval_2.strip('\n ').split(',')
 
     nombres_1 = nombres_1.split(',')
     nombres_2 = nombres_2.split(',')
-    eval_1 = eval_1.split(',')
-    eval_2 = eval_2.split(',')
 
     return nombres_1,nombres_2,eval_1,eval_2
 
