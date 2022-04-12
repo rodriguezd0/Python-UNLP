@@ -13,5 +13,7 @@ for i in leer_catalogo:
     else:
          paises[i[5]] = 1
 
-mas_comun = Counter(paises).most_common(1)
-print(f'El pais que mas produce es {mas_comun[0][0]} con {mas_comun[0][1]} producciones')
+mas_comun = Counter(paises).most_common(5)
+
+for i in range(len(mas_comun)):
+    print(f'{i+1}) {mas_comun[i][0]} con {mas_comun[i][1]} producciones')
