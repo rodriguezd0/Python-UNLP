@@ -27,11 +27,23 @@ def informar_paises(lista):
 def esta_pais(show,pais,lista):
     return len(list(filter(lambda x: pais.lower() in x[5].lower() and show[3] == x[3],lista))) > 0
 
+def determinar_si_pais_esta(cabecera,lista):
+    print()
+    print('Esta funcion te dice si un show tiene cierto pais. ')
+    show = int(input(f'Ingresa un numero de show 0-{len(lista)-1}: '))
+    pais = input('Ingresa el pais: ')
+    if esta_pais(lista[show],pais.lower(),lista):
+        for i in range(len(lista[show])):
+            print(cabecera[i], end=': ')
+            print(lista[show][i])
+    else:
+        print(f'El pais no se encuentra en el show, los paises son: {lista[show][5]}')
+
+
 
 cabecera, lista = abrir_archivo()
 
 
 #Informar paises
 informar_paises(lista)
-print(lista[1])
-print(esta_pais(lista[1],'South Africa',lista))
+determinar_si_pais_esta(cabecera,lista)
