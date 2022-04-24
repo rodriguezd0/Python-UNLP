@@ -1,3 +1,3 @@
-La columna de pais esta en la posicion '5' del vector, la sexta posicion fisica.
+La columna de pais esta en la posicion '5' del vector, la sexta posicion fisica
 
 Primero genero una lista donde voy a ir agregando todos los paises, luego obtengo todos los paises que componen un show y hago un split en los ", ". Los show que solo tengan un pais no van a hacer ningun split, entonces solo me va a agregar unpais. Si se divide, entonces recorro la lista de paises generada y las agrego a la lista que genere inicialmente para agregar a los paises. Luego ordeno un set de la lista que genere al principio y lo imprimo.
