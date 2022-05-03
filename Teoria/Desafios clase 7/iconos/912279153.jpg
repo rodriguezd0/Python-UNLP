@@ -1,0 +1,15 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+<title>Error 429 Too Many Requests</title>
+</head>
+<body><h2>HTTP ERROR 429 Too Many Requests</h2>
+<table>
+<tr><th>URI:</th><td>/image/v2/thumb/Purple1/v4/94/8e/2c/948e2cb7-6ce6-b109-44e1-84bafd44593a/source/512x512bb.jpg</td></tr>
+<tr><th>STATUS:</th><td>429</td></tr>
+<tr><th>MESSAGE:</th><td>Too Many Requests</td></tr>
+<tr><th>SERVLET:</th><td>jersey</td></tr>
+</table>
+
+</body>
+</html>
