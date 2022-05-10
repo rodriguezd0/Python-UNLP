@@ -17,6 +17,7 @@ def encontrar_tabla(result):
         return tabla_goleadores
 
 id = encontrar_tabla(result)
+print(f'Es la tabla {id}')
 goleadores = result[id]
 goleadores = goleadores[goleadores['Goles'] > 5]
 goleadores = goleadores.drop(['Pos.','Selección','Partidos','Promedio','Torneos jugados'],axis='columns')
